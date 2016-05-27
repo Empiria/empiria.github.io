@@ -1,9 +1,9 @@
 ---
-permalink: /introduction/
+permalink: /story/
 layout: page
-title: "Introduction"
+title: "Our Story"
 header:
-    image_fullwidth: laptop_notebook.jpg
+    image_fullwidth: story_book.jpg
 ---
 Integer lectus orci, facilisis pellentesque iaculis ac, interdum ut dolor. Vestibulum neque justo, gravida nec ornare eget, molestie a nulla. Aenean diam elit, rhoncus ut tellus tempus, pulvinar efficitur lectus. Proin porta felis diam, nec molestie urna fringilla eget. Suspendisse egestas lacus tincidunt tortor laoreet aliquam. Nam posuere euismod enim, non tempus mauris consectetur id. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam tincidunt venenatis pretium. Nunc at pulvinar nulla, vitae blandit purus. In hac habitasse platea dictumst. Vestibulum a aliquet dolor. Suspendisse id dapibus sem, a tincidunt nisi. Sed ipsum dui, luctus eu magna eget, posuere eleifend felis. Etiam feugiat non odio eu imperdiet. Pellentesque sed nulla ac nisl bibendum tincidunt ac id sem. Donec gravida urna ut neque placerat bibendum.
 
