@@ -19,4 +19,9 @@ widget3:
     title: "Another Thing"
     url: 'http://empiria.github.io'
     text: "Quisque interdum nisl quam, ut eleifend urna pharetra vestibulum. Integer sodales ullamcorper ligula, non elementum sem porttitor sit amet."
+
+callforaction:
+  url: https://empiria.github.io
+  text: This could do something too!
+  style: alert
 ---
