@@ -1,21 +1,21 @@
 # Title of your website
-title: 'omni4d'
+title: 'Empiria'
 
 # The slogan describes your website and is used on homepage in <title> and other important places
-slogan: '4D All the Things'
+slogan: 'Independent Agresso Consultancy'
 
 # The description is used on homepage and in the footer to quickly describe your website. Use a maximum of 150 characters for SEO-purposes.
-description: 'We are doing some clever stuff based on the book by Chris Partridge.'
+description: ''
 
 # The credits show up in the includes/_footer.html – It would be nice of you to leave a link to Phlow or Feeling Responsive as a thank you :)
-copyright: "Copyright (c) Metrophase Ltd. All rights reserved."
+copyright: "Copyright (c) Empiria Ltd. All rights reserved."
 
 # Main author of the website
 # See > authors.yml
 author: owen
 
 # This URL is the main address for absolute links. Don't include a slash at the end.
-url: 'https://omni4d.github.io'
+url: 'https://empiria.github.io'
 baseurl: ''
 
 # This is for the editing function in _/includes/improve_content
@@ -28,7 +28,7 @@ baseurl: ''
 # Example: <img src="{{ site.urlimg }}{{ post.image.title }}" />
 # Markdown-Example for posts ![Image Text]({{ site.urlimg }}image.jpg)
 #
-urlimg: 'https://omni4d.github.io/images/'
+urlimg: 'https://empiria.github.io/images/'
 
 # Logo size is 600x80 pixels
 logo: "logo.png"
