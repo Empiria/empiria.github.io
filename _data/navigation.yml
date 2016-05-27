@@ -2,16 +2,12 @@
   url: "/"
   side: left
 
-- title: 'Introduction'
-  url: "/introduction"
+- title: 'Our Services'
+  url: "/services"
   side: left
 
-- title: 'Getting Started'
-  url: "/getting_started"
-  side: left
-
-- title: 'Contribute'
-  url: "/contribute"
+- title: 'Our Technology'
+  url: "/services"
   side: left
 
 - title: Blog

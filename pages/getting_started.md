@@ -1,9 +1,9 @@
 ---
-permalink: /getting_started/
+permalink: /technology/
 layout: page
-title: "Getting Started"
+title: "Our Technology"
 header:
-    image_fullwidth: 100m_sprint.jpg
+    image_fullwidth: laptop_console.jpg
 ---
 Phasellus eleifend elementum nunc bibendum auctor. Proin faucibus nec ante id volutpat. Vivamus ullamcorper convallis ipsum, id ultrices velit. Sed eget commodo magna, a hendrerit tellus. Pellentesque in ullamcorper felis, hendrerit blandit lacus. Pellentesque fermentum vestibulum scelerisque. Aliquam erat volutpat. Integer lacinia felis nec nunc eleifend, ut vestibulum lorem euismod. Donec sollicitudin rutrum augue, non vulputate felis egestas sit amet. Proin ultrices, mauris id tincidunt tristique, urna enim elementum felis, vitae vestibulum nisi diam ac ligula. Sed ac erat mattis, tincidunt turpis non, maximus erat. Nunc non justo a eros interdum viverra. Cras aliquam eros in orci commodo gravida.
 
