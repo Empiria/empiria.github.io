@@ -1,8 +1,8 @@
 {
     "m.homeserver": {
-        "base_url": "[8] https://empiria.ems.host"
+        "base_url": "https://empiria.ems.host"
     },
     "m.identity_server": {
-        "base_url": "[9] https://vector.im"
+        "base_url": "https://vector.im"
     }
 }
