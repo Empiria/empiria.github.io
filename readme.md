@@ -1,4 +1,11 @@
-## Empiria Website
+# Empiria Website
+
+## 🚀 Quick Start
+
+Visit the [Preview Site](https://empiria-website.on-fleek.app/)
+Also available directly via IPNS: ipns://k51qzi5uqu5dm6torbohe0rcbm2kd0wkrp74yjgq0k7my1wxu68e6v7ikxh140/
+
+## Development
 
 ### ⚙️ Prerequisites
 
@@ -16,7 +23,7 @@ Install all the dependencies using the following command.
 npm install
 ```
 
-### 👉 Development Command
+### 👉 Start Development Server
 
 Start the development server using the following command.
 
