@@ -7,6 +7,10 @@ social:
   - name: github
     icon: fa-brands fa-github
     link: https://github.com/uglyfruitcake
+
+  - name: linkedin
+    icon: fa-brands fa-linkedin
+    link: https://linkedin.com/in/tom-campbell-8b769a316
 ---
 
 lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
