@@ -8,7 +8,7 @@ weight = 1
 
 [[main]]
 name = "Our Team"
-pageRef = "/authors"
+pageRef = "/team"
 weight = 2
 
 [[main]]
