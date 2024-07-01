@@ -3,7 +3,8 @@
 ## 🚀 Quick Start
 
 Visit the [Preview Site](https://empiria-website.on-fleek.app/)
-Also available directly via IPNS: ipns://k51qzi5uqu5dm6torbohe0rcbm2kd0wkrp74yjgq0k7my1wxu68e6v7ikxh140/
+
+Also available directly via [IPNS](ipns://k51qzi5uqu5dm6torbohe0rcbm2kd0wkrp74yjgq0k7my1wxu68e6v7ikxh140/)
 
 ## Development
 
@@ -17,7 +18,7 @@ You need to have the following installed:
 
 ### 👉 Install Dependencies
 
-Install all the dependencies using the following command.
+Install the dependencies.
 
 ```bash
 npm install
@@ -25,7 +26,13 @@ npm install
 
 ### 👉 Start Development Server
 
-Start the development server using the following command.
+Start the development server.
 
 ```bash
 npm run dev
+```
+
+### 👉 Reference
+
+- [Hugo](https://gohugo.io/documentation/)
+- [HugoPlate Theme](https://github.com/zeon-studio/hugoplate/)
