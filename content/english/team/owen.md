@@ -1,7 +1,7 @@
 ---
 title: Owen
 email: owen.campbell@empiria.co.uk
-image: "/images/avatar.png"
+image: "/images/owen.jpg"
 description: this is meta description
 social:
   - name: github
@@ -12,5 +12,5 @@ social:
     icon: fa-brands fa-linkedin
     link: https://linkedin.com/in/owencampbell
 ---
-
-lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
+I'm a well-established Freelance Software Engineer with 30+ years' experience.
+I'm a Python enthusiast, one of the PyCon UK organisers and chair of the UK Python Association.

@@ -1,7 +1,7 @@
 ---
 title: Thomas
 email: thomas.campbell@empiria.co.uk
-image: "/images/avatar.png"
+image: "/images/thomas.jpg"
 description: this is meta description
 social:
   - name: github
@@ -12,5 +12,5 @@ social:
     icon: fa-brands fa-linkedin
     link: https://linkedin.com/in/tom-campbell-8b769a316
 ---
-
-lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
+I'm a Freelance Software Engineer with 10+ years' experience.
+I'm interested in Mathematics, Tabletop Games, Decentralisation and Disc Golf.

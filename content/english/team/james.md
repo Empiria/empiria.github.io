@@ -1,7 +1,7 @@
 ---
 title: James
 email: james.campbell@empiria.co.uk
-image: "/images/avatar.png"
+image: "/images/james.jpg"
 description: this is meta description
 social:
   - name: github
@@ -12,5 +12,6 @@ social:
     icon: fa-brands fa-linkedin
     link: https://linkedin.com/in/james-campbell-99635478/
 ---
+I'm interested in trustless, open-source, and decentralised technology. I'm an experienced Full-Stack Developer, Blockchain Engineer, and DevOps Engineer.
 
-lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
+Outside of work I enjoy Scuba diving, Bouldering, and Modular Synthesisers.

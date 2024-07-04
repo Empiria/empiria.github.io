@@ -1,5 +1,5 @@
 ---
-enable: true
+enable: false
 title: "What Our Customers Say"
 description: "Don't just take our word for it - hear from some of our satisfied customers!"
 
