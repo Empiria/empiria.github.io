@@ -12,7 +12,7 @@
 # Features
 features:
   - title: "Who We Are"
-    image: "/images/service-1.png"
+    image: "/images/ethdam.png"
     content: ""
     bulletpoints:
       - "We are a small team of three software developers"
@@ -24,7 +24,7 @@ features:
       link: "#"
 
   - title: "Why Choose Us"
-    image: "/images/service-2.png"
+    image: "/images/laptop_hands.jpg"
     content: ""
     bulletpoints:
       - "We are not just a solo developer. Each of us has the backup and support of the others."
