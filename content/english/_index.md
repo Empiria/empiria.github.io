@@ -17,7 +17,7 @@ features:
     bulletpoints:
       - "We are a small team of three software developers"
       - "We are a UK based, family business"
-      - "Between us, we have over 60 years of development experience."
+      - "Between us, we have several decades of development experience."
     button:
       enable: false
       label: ""

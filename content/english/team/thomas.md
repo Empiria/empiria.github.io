@@ -12,5 +12,5 @@ social:
     icon: fa-brands fa-linkedin
     link: https://linkedin.com/in/tom-campbell-8b769a316
 ---
-I'm a Freelance Software Engineer with 10+ years' experience.
+I'm a Freelance Software Engineer with several years' experience.
 I'm interested in Mathematics, Tabletop Games, Decentralisation and Disc Golf.
