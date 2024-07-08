@@ -29,7 +29,7 @@ To counter that, Anvil provides a single Python based environment in which to bu
 However, Anvil also has 'Escape Hatches' - if the Python abstraction is getting in the way, we can drop down to writing our own JavaScript, HTML, CSS or SQL. We're not constrained by the Anvil abstraction - it's there to help make things easy. We can always go around it if we need to.
 
 ## Commercial Strengths
-Anvil is a commercial product. That means that there is a company behind it, providing support, maintaining the platform and developing new features.
+Anvil is a commercial product. That means that there is a company behind it, providing support, maintaining the platform, and developing new features.
 
 It also means our clients have contracts with Anvil to provide the hosting and support services that are needed to keep their applications running - leaving us free to concentrate on what we do best - building great applications.
 
