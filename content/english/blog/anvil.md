@@ -15,7 +15,7 @@ For us, there are compelling reasons both technical and commercial to use Anvil 
 ## What is Anvil?
 Anvil is a platform for building web applications.
 
-It's a development framework, a hosting and support service, a community of developers and a tool that scales from solo hobby projects to serious enterprise applications.
+It's a development framework, a hosting and support service, a community of developers, and a tool that scales from solo hobby projects to serious enterprise applications.
 
 Anvil has a drag-and-drop designer for building the user interface, a Python editor for writing the code that powers the application and a deployment system that makes it easy to get your application online.
 
