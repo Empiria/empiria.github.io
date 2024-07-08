@@ -24,7 +24,7 @@ But let's also be clear about what Anvil is not - It's not a low-code or a no-co
 ## Technical Advantages
 Web development is difficult. There are many moving parts, many technologies to learn and many ways to get things wrong.
 
-To counter that, Anvil provides a single Python based environment in which to build an application. We don't need to worry about setting up a server, configuring a database, managing security or any of the other tasks that can distract from building an application.
+To counter that, Anvil provides a single Python based environment in which to build an application. We don't need to worry about setting up a server, configuring a database, managing security or any of the other tasks that can distract from building the application itself.
 
 However, Anvil also has 'Escape Hatches' - if the Python abstraction is getting in the way, we can drop down to writing our own JavaScript, HTML, CSS or SQL. If the drag-and-drop designer can't do what we need, we can add UI components with code.  We're not constrained by the Anvil abstraction - it's there to help make things easy. We can always go around it if we need to.
 
