@@ -63,9 +63,9 @@ show_categories = true
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
 [metadata]
 keywords = []
-description = "Hugo & Tailwindcss Starter"
+description = "Empiria"
 author = "Empiria"
-image = "images/og-image.png"
+image = "images/ethdam.png"
 
 
 # site verifications
