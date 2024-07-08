@@ -26,7 +26,7 @@ Web development is difficult. There are many moving parts, many technologies to 
 
 To counter that, Anvil provides a single Python based environment in which to build an application. We don't need to worry about setting up a server, configuring a database, managing security or any of the other tasks that can distract from building an application.
 
-However, Anvil also has 'Escape Hatches' - if the Python abstraction is getting in the way, we can drop down to writing our own JavaScript, HTML, CSS or SQL. We're not constrained by the Anvil abstraction - it's there to help make things easy but we can always go around it if we need to.
+However, Anvil also has 'Escape Hatches' - if the Python abstraction is getting in the way, we can drop down to writing our own JavaScript, HTML, CSS or SQL. We're not constrained by the Anvil abstraction - it's there to help make things easy. We can always go around it if we need to.
 
 ## Commercial Strengths
 Anvil is a commercial product. That means that there is a company behind it, providing support, maintaining the platform and developing new features.
