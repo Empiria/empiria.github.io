@@ -28,6 +28,7 @@ google_adsense = ""     # example: ca-pub-xxxxxxxxxxxxxxxx
 custom_script = ""
 # copyright
 copyright = "© 2024 Empiria Ltd."
+footer_text = "A company registered in England and Wales No. 4044182"
 
 # Preloader
 # preloader module: https://github.com/gethugothemes/hugo-modules/tree/master/components/preloader
