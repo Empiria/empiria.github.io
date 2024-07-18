@@ -55,8 +55,18 @@
             "theme",
             document.documentElement.classList.contains("dark") ? "dark" : "light"
           );
+          let iframes = document.querySelectorAll('iframe');
+          iframes.forEach(iframe => {
+            iframe.contentWindow.postMessage({ theme: localStorage.getItem("theme") }, '*');
+          });
         });
       });
     });
+
+    window.addEventListener("message", function(event) {
+      if (event.data && event.data.requestTheme) {
+        event.source.postMessage({ theme: localStorage.getItem("theme") }, event.origin);
+      }
+    })
   </script>
 {{ end }}
