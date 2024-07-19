@@ -23,7 +23,7 @@ def within_iframe():
     return anvil.js.window != anvil.js.window.parent
 ```
 
-if the app is within an iframe, it listens for messages from the parent page and assigns a handler for those messages. it then sends a message to the parent requesting the current theme:
+If the app is within an iframe, it listens for messages from the parent page and assigns a handler for those messages. It then sends a message to the parent requesting the current theme:
 
 ```python
 if within_iframe():
@@ -31,7 +31,7 @@ if within_iframe():
     anvil.js.window.parent.postmessage({"requesttheme": true}, "*")
 ```
 
-in this example, the handler for any message received from the parent page is as follows:
+In this example, the handler for any message received from the parent page is as follows:
 
 ```python
 def on_message(self, event):
