@@ -1,6 +1,8 @@
 ---
 title: "Theme Switcher Demo"
 date: 2024-07-19T16:16:52+01:00
+categories: ["Web Development"]
+author: Owen
 ---
 A demonstration of controlling an embedded [Anvil](https://anvil.works) web application from its parent page.
 
