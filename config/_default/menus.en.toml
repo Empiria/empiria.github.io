@@ -25,3 +25,8 @@ weight = 4
 name = "Talks"
 pageRef = "/talks"
 weight = 5
+
+[[main]]
+name = "Contact"
+pageRef = "/contact"
+weight = 6
