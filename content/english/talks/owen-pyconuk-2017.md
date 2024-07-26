@@ -7,4 +7,4 @@ categories:
   - conferences
 draft: false
 ---
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OSFCvv2wpOU" title="PYCON UK 2017: God Is Real (unless declared an integer)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="1140" height="641" src="https://www.youtube.com/embed/OSFCvv2wpOU" title="PYCON UK 2017: God Is Real (unless declared an integer)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
