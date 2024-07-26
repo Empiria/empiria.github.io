@@ -3,6 +3,7 @@ title: Thomas
 email: thomas.campbell@empiria.co.uk
 image: "/images/thomas.jpg"
 description: this is meta description
+aliases: ["authors/thomas"]
 social:
   - name: github
     icon: fa-brands fa-github
