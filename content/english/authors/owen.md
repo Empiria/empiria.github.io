@@ -3,7 +3,6 @@ title: Owen
 email: owen.campbell@empiria.co.uk
 image: "/images/owen.jpg"
 description: this is meta description
-aliases: ["authors/owen"]
 social:
   - name: github
     icon: fa-brands fa-github
