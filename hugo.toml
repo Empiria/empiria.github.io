@@ -3,8 +3,10 @@ relativeURLs = true
 title = "Empiria"
 theme = "hugoplate"
 timeZone = "Europe/London"
-paginate = 2 # see https://gohugo.io/extras/pagination/
 summaryLength = 10 # see https://gohugo.io/content-management/excerpts/
+
+[pagination]
+pagerSize = 2 # see https://gohugo.io/extras/pagination/
 disableLanguages = [] # example: ["fr"] for disable french language. see https://gohugo.io/content-management/multilingual/
 hasCJKLanguage = false #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Korean Languages in the content. see: https://gohugo.io/getting-started/configuration/#hascjklanguage
 defaultContentLanguage = 'en'
@@ -20,7 +22,7 @@ defaultContentLanguageInSubdir = true
 
 ########################## Permalinks ############################
 [permalinks.page]
-"pages" = "/:slugorfilename/"
+"pages" = "/:slugorcontentbasename/"
 
 
 ############################# Modules ############################
