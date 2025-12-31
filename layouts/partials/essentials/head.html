@@ -17,10 +17,6 @@
 {{ partialCached "favicon" . }}
 
 
-<!-- site verifications -->
-{{ partialCached "site-verifications.html" . }}
-
-
 <!-- opengraph and twitter card -->
 {{ partial "basic-seo.html" . }}
 
@@ -33,10 +29,6 @@
 {{ if and site.Config.Services.GoogleAnalytics.ID (ne site.Config.Services.GoogleAnalytics.ID "G-MEASUREMENT_ID") }}
   {{ template "_internal/google_analytics.html" . }}
 {{ end }}
-
-
-<!-- google tag manager -->
-{{ partialCached "gtm.html" . }}
 
 
 <!-- search index -->
