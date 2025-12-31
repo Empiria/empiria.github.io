@@ -1,4 +1,5 @@
-{{ if or (eq .Section "blog") (in .RelPermalink "/blog") }}
+{{ $isBlogSection := or (eq .Section "blog") (in .RelPermalink "/blog/") }}
+{{ if $isBlogSection }}
   {{ $searchJS := resources.Get "js/search.js" }}
   {{ if $searchJS }}
     {{ if hugo.IsProduction }}
