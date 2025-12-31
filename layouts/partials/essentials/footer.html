@@ -3,20 +3,45 @@
     <div class="container py-4">
       <div class="row items-center">
         <div class="lg:col-6 mb-2 text-center lg:mb-0 lg:text-left">
-          <!-- Social icons -->
-          <ul class="social-icons justify-center lg:justify-start">
-            {{ range site.Data.social.main }}
-              <li>
-                <a
-                  target="_blank"
-                  aria-label="{{ .name }}"
-                  rel="nofollow noopener"
-                  href="{{ .link | safeURL }}">
-                  {{ partial (printf "icons/%s" .name) }}
-                </a>
-              </li>
-            {{ end }}
-          </ul>
+          <!-- Social icons + links on same line -->
+          <div
+            class="flex flex-wrap items-center justify-center lg:justify-start gap-2">
+            <!-- Social icons -->
+            <ul class="social-icons flex gap-2">
+              {{ range site.Data.social.main }}
+                <li>
+                  <a
+                    target="_blank"
+                    aria-label="{{ .name }}"
+                    rel="nofollow noopener"
+                    href="{{ .link | safeURL }}">
+                    {{ partial (printf "icons/%s" .name) }}
+                  </a>
+                </li>
+              {{ end }}
+            </ul>
+            <!-- Footer links -->
+            <ul class="flex gap-1">
+              {{ range site.Menus.footer }}
+                <li>
+                  <a
+                    {{ if findRE `^http` .URL }}
+                      target="_blank" rel="noopener"
+                    {{ end }}
+                    href="{{ if findRE `^#` .URL }}
+                      {{ if not $.IsHome }}
+                        {{ site.Home.RelPermalink }}
+                      {{ end }}{{ .URL }}
+                    {{ else }}
+                      {{ .URL | relLangURL }}
+                    {{ end }}"
+                    class="text-sm"
+                    >{{ .Name }}</a
+                  >
+                </li>
+              {{ end }}
+            </ul>
+          </div>
         </div>
         <div class="lg:col-6 mb-2 text-center lg:mb-0 lg:text-right">
           <!-- Company info -->
@@ -28,26 +53,6 @@
               {{ site.Params.copyright | markdownify }}
             </p>
           </div>
-          <!-- Footer links -->
-          <ul class="mt-2">
-            {{ range site.Menus.footer }}
-              <li class="m-1 inline-block">
-                <a
-                  {{ if findRE `^http` .URL }}
-                    target="_blank" rel="noopener"
-                  {{ end }}
-                  href="{{ if findRE `^#` .URL }}
-                    {{ if not $.IsHome }}
-                      {{ site.Home.RelPermalink }}
-                    {{ end }}{{ .URL }}
-                  {{ else }}
-                    {{ .URL | relLangURL }}
-                  {{ end }}"
-                  >{{ .Name }}</a
-                >
-              </li>
-            {{ end }}
-          </ul>
         </div>
       </div>
     </div>
