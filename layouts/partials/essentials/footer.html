@@ -2,10 +2,9 @@
   <div class="border-border dark:border-darkmode-border border-t">
     <div class="container py-2">
       <div class="row items-center">
-        <div class="lg:col-6 mb-2 text-center lg:mb-0 lg:text-left">
+        <div class="lg:col-6 text-center lg:text-left">
           <!-- Social icons + links on same line -->
-          <div
-            class="flex flex-wrap items-center justify-center lg:justify-start gap-2">
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-1">
             <!-- Social icons -->
             <ul class="social-icons flex gap-2">
               {{ range site.Data.social.main }}
@@ -42,6 +41,20 @@
               {{ end }}
             </ul>
           </div>
+          <!-- Company info -->
+          <div class="text-light dark:text-darkmode-light text-sm">
+            <p class="mb-1">
+              {{ site.Params.footer_text | markdownify }}
+            </p>
+            <p>
+              {{ site.Params.copyright | markdownify }}
+            </p>
+          </div>
+        </div>
+        <div class="lg:col-6 text-center lg:text-right">
+          
+        </div>
+      </div>
         </div>
         <div class="lg:col-6 mb-2 text-center lg:mb-0 lg:text-right">
           <!-- Company info -->
