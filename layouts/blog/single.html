@@ -16,14 +16,14 @@
             <li class="mr-4 inline-block">
               <a
                 href="{{ `team/` | relLangURL }}{{ .Params.Author | urlize }}/">
-                <i class="fa-regular fa-circle-user mr-2"></i
+                <span class="mr-2">{{ partial "icons/user" }}</span
                 >{{ .Params.author }}
               </a>
             </li>
             {{ $categories:= .Params.categories }}
             {{ if $categories }}
               <li class="mr-4 inline-block">
-                <i class="fa-regular fa-folder mr-2"></i>
+                <span class="mr-2">{{ partial "icons/folder" }}</span>
                 {{ range $i,$p:= $categories }}
                   <a
                     href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/"
@@ -36,7 +36,7 @@
               </li>
             {{ end }}
             <li class="mr-4 inline-block">
-              <i class="fa-regular fa-clock mr-2"></i>
+              <span class="mr-2">{{ partial "icons/clock" }}</span>
               {{ time.Format ":date_long" .PublishDate }}
             </li>
           </ul>
