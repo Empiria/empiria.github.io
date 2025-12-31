@@ -110,9 +110,6 @@ notAlternative = true
 
 # JS Plugins
 [[params.plugins.js]]
-link = "js/search.js"
-lazy = false
-[[params.plugins.js]]
 link = "plugins/cookie.js"
 lazy = false
 [[params.plugins.js]]
