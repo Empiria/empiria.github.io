@@ -1,1 +1,9 @@
 // Add your own custom styles here
+
+// Force feature images to respect max-width constraint
+picture .max-w-sm.img,
+picture .max-w-xs.img {
+  width: auto !important;
+  max-width: 20rem !important;
+  height: auto !important;
+}

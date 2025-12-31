@@ -9,7 +9,9 @@
   <div class="p-8 px-3 pb-8 text-center sm:px-8">
     <ul class="mb-4">
       <li class="mr-4 inline-block">
-        <a href="{{ `team/` | relLangURL }}{{ .Params.Author | urlize }}/">
+        <a
+          href="{{ `team/` | relLangURL }}{{ .Params.Author | urlize }}/"
+          class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
           <span class="mr-2">{{ partial "icons/user" }}</span
           >{{ .Params.author }}
         </a>
@@ -21,7 +23,7 @@
           {{ range $i,$p:= $categories }}
             <a
               href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/"
-              class=""
+              class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >{{ . | humanize }}{{ if ne $i (sub (len $categories) 1) }}
                 {{ "," }}
               {{ end }}
@@ -31,7 +33,9 @@
       {{ end }}
     </ul>
     <h3 class="mb-2">
-      <a href="{{ .RelPermalink }}" class="block hover:text-primary">
+      <a
+        href="{{ .RelPermalink }}"
+        class="block hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
         {{ .Title }}
       </a>
     </h3>

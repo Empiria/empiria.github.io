@@ -42,8 +42,8 @@
           <div
             class="mb:md-0 {{ if not (modBool $i 2) }}
               md:order-2
-            {{ end }} md:col-5 mb-6">
-            {{ partial "image" (dict "Src" .image "Alt" "feature image" "Class" "max-w-sm mx-auto" "DisplayXL" "400x" "DisplayLG" "350x" "DisplayMD" "300x") }}
+            {{ end }} md:col-5 mb-6 flex items-center">
+            {{ partial "image" (dict "Src" .image "Alt" "feature image" "Class" "max-w-xs mx-auto" "DisplayXL" "400x" "DisplayLG" "350x" "DisplayMD" "300x") }}
           </div>
           <div
             class="{{ if not (modBool $i 2) }}
