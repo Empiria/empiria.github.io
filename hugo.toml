@@ -63,7 +63,7 @@ target = '$1'
 
 ############################# Outputs ############################
 [outputs]
-home = ["HTML", "RSS", "WebAppManifest", "SearchIndex"]
+home = ["HTML", "RSS", "SearchIndex"]
 
 ############################# Imaging ############################
 [imaging]
@@ -97,18 +97,8 @@ endLevel = 5
 ordered = true
 
 
-########################### Media types ###########################
-[mediaTypes]
-[mediaTypes."application/manifest+json"]
-suffixes = ["webmanifest"]
-
-
 ########################### Output Format ##########################
 [outputFormats]
-[outputFormats.WebAppManifest]
-mediaType = "application/manifest+json"
-rel = "manifest"
-
 [outputFormats.SearchIndex]
 mediaType = "application/json"
 baseName = "searchindex"
