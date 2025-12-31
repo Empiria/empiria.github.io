@@ -2,15 +2,7 @@
   <div class="border-border dark:border-darkmode-border border-t">
     <div class="container py-4">
       <div class="row items-center">
-        <div class="lg:col-3 mb-2 text-center lg:mb-0 lg:text-left">
-          <!-- navbar brand/logo -->
-          <a
-            class="navbar-brand inline-block"
-            href="{{ site.Home.RelPermalink }}">
-            {{ partial "logo" }}
-          </a>
-        </div>
-        <div class="lg:col-6 mb-2 text-center lg:mb-0">
+        <div class="lg:col-6 mb-2 text-center lg:mb-0 lg:text-left">
           <ul>
             {{ range site.Menus.footer }}
               <li class="m-1 inline-block">
@@ -31,7 +23,7 @@
             {{ end }}
           </ul>
         </div>
-        <div class="lg:col-3 mb-2 text-center lg:mb-0">
+        <div class="lg:col-6 mb-2 text-center lg:mb-0 lg:text-right">
           <!-- Social icons -->
           <ul class="social-icons justify-center lg:justify-end">
             {{ range site.Data.social.main }}
