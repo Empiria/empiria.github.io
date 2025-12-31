@@ -31,8 +31,23 @@
             {{ end }}
           </ul>
         </div>
-        <div class="lg:col-3 mb-2 text-center lg:mb-0 lg:text-right">
-          <div class="text-light dark:text-darkmode-light text-sm">
+        <div class="lg:col-3 mb-2 text-center lg:mb-0">
+          <!-- Social icons -->
+          <ul class="social-icons justify-center lg:justify-end">
+            {{ range site.Data.social.main }}
+              <li>
+                <a
+                  target="_blank"
+                  aria-label="{{ .name }}"
+                  rel="nofollow noopener"
+                  href="{{ .link | safeURL }}">
+                  {{ partial (printf "icons/%s" .name) }}
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+          <!-- Company info -->
+          <div class="text-light dark:text-darkmode-light text-sm mt-2">
             <p class="mb-1">
               {{ site.Params.footer_text | markdownify }}
             </p>
