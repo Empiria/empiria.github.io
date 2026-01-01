@@ -1,0 +1,15 @@
+{{ $isBlogSection := or (eq .Section "blog") (in .RelPermalink "/blog/") }}
+{{ if $isBlogSection }}
+  {{ $searchJS := resources.Get "js/search.js" }}
+  {{ if $searchJS }}
+    {{ if hugo.IsProduction }}
+      {{ $searchJS = $searchJS | minify | fingerprint }}
+    {{ end }}
+    <script
+      crossorigin="anonymous"
+      {{ if hugo.IsProduction }}
+        integrity="{{ $searchJS.Data.Integrity }}"
+      {{ end }}
+      src="{{ $searchJS.RelPermalink }}"></script>
+  {{ end }}
+{{ end }}

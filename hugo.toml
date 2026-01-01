@@ -63,7 +63,7 @@ target = '$1'
 
 ############################# Outputs ############################
 [outputs]
-home = ["HTML", "RSS", "WebAppManifest", "SearchIndex"]
+home = ["HTML", "RSS", "SearchIndex"]
 
 ############################# Imaging ############################
 [imaging]
@@ -97,18 +97,8 @@ endLevel = 5
 ordered = true
 
 
-########################### Media types ###########################
-[mediaTypes]
-[mediaTypes."application/manifest+json"]
-suffixes = ["webmanifest"]
-
-
 ########################### Output Format ##########################
 [outputFormats]
-[outputFormats.WebAppManifest]
-mediaType = "application/manifest+json"
-rel = "manifest"
-
 [outputFormats.SearchIndex]
 mediaType = "application/json"
 baseName = "searchindex"
@@ -118,48 +108,10 @@ notAlternative = true
 
 ############################# Plugins ##############################
 
-# CSS Plugins
-[[params.plugins.css]]
-link = "plugins/swiper/swiper-bundle.css"
-lazy = true
-[[params.plugins.css]]
-link = "plugins/glightbox/glightbox.css"
-lazy = true
-[[params.plugins.css]]
-link = "plugins/font-awesome/v6/brands.css"
-lazy = true
-[[params.plugins.css]]
-link = "plugins/font-awesome/v6/solid.css"
-lazy = true
-[[params.plugins.css]]
-link = "plugins/font-awesome/v6/icons.css"
-lazy = true
-
 # JS Plugins
-[[params.plugins.js]]
-link = "js/search.js"
-lazy = false
-[[params.plugins.js]]
-link = "plugins/swiper/swiper-bundle.js"
-lazy = false
 [[params.plugins.js]]
 link = "plugins/cookie.js"
 lazy = false
-[[params.plugins.js]]
-link = "plugins/glightbox/glightbox.js"
-lazy = true
-[[params.plugins.js]]
-link = "js/gallery-slider.js"
-lazy = true
-[[params.plugins.js]]
-link = "js/accordion.js"
-lazy = true
-[[params.plugins.js]]
-link = "js/tab.js"
-lazy = true
-[[params.plugins.js]]
-link = "js/modal.js"
-lazy = true
 [[params.plugins.js]]
 link = "plugins/youtube-lite.js"
 lazy = true

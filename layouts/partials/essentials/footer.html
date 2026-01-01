@@ -1,0 +1,52 @@
+<footer class="bg-theme-light dark:bg-darkmode-theme-light">
+  <div class="border-border dark:border-darkmode-border border-t">
+    <div class="container py-2">
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <!-- Social icons -->
+        <ul class="social-icons flex gap-2">
+          {{ range site.Data.social.main }}
+            <li>
+              <a
+                target="_blank"
+                aria-label="{{ .name }}"
+                rel="nofollow noopener"
+                href="{{ .link | safeURL }}">
+                {{ partial (printf "icons/%s" .name) }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+
+        <!-- Footer links -->
+        <ul class="flex gap-1">
+          {{ range site.Menus.footer }}
+            <li>
+              <a
+                {{ if findRE `^http` .URL }}
+                  target="_blank" rel="noopener"
+                {{ end }}
+                href="{{ if findRE `^#` .URL }}
+                  {{ if not $.IsHome }}
+                    {{ site.Home.RelPermalink }}
+                  {{ end }}{{ .URL }}
+                {{ else }}
+                  {{ .URL | relLangURL }}
+                {{ end }}"
+                class="text-sm"
+                >{{ .Name }}</a
+              >
+            </li>
+          {{ end }}
+        </ul>
+
+        <!-- Company info -->
+        <div class="text-light dark:text-darkmode-light text-sm">
+          <p>
+            {{ site.Params.footer_text | markdownify }} •
+            {{ site.Params.copyright | markdownify }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
