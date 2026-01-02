@@ -9,6 +9,9 @@ social:
 
   - name: linkedin
     link: https://linkedin.com/in/owencampbell
+
+  - name: website
+    link: https://owencampbell.eth.link
 ---
 
 I'm a well-established Freelance Software Engineer with 30+ years' experience.
