@@ -53,6 +53,8 @@ jobs:
         run: hugo mod get -u
 
       - name: Build with Hugo
+        env:
+          HUGO_BASEURL: https://empiria.github.io/empiria-website/
         run: npm run build
 
       - name: Upload artifact
