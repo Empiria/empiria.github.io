@@ -47,7 +47,7 @@ jobs:
           extended: true
 
       - name: Install npm dependencies
-        run: npm ci
+        run: npm install
 
       - name: Update Hugo modules
         run: hugo mod get -u
