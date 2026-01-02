@@ -8,5 +8,15 @@
       "name": "linkedin",
       "link": "https://www.linkedin.com/company/empiria"
     }
+  ],
+  "team_blogs": [
+    {
+      "name": "Owen's Blog",
+      "link": "/blog"
+    },
+    {
+      "name": "James's Blog",
+      "link": "/blog"
+    }
   ]
 }

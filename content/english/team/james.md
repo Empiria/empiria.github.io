@@ -8,7 +8,7 @@ social:
     link: https://github.com/theref
 
   - name: linkedin
-    link: https://linkedin.com/in/james-campbell-99635478/
+    link: https://linkedin.com/in/james-campbell-99635478
 
   - name: website
     link: https://theref.eth.link

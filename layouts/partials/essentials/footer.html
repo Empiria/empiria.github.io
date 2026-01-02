@@ -39,6 +39,19 @@
           {{ end }}
         </ul>
 
+        <!-- Team blog links -->
+        <ul class="flex gap-2">
+          {{ range site.Data.social.team_blogs }}
+            <li>
+              <a
+                href="{{ .link | relLangURL }}"
+                class="text-sm text-primary dark:text-darkmode-primary hover:text-secondary dark:hover:text-darkmode-secondary"
+                >{{ .Name }}</a
+              >
+            </li>
+          {{ end }}
+        </ul>
+
         <!-- Company info -->
         <div class="text-light dark:text-darkmode-light text-sm">
           <p>
