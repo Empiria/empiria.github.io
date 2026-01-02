@@ -1,9 +1,16 @@
 <footer class="bg-theme-light dark:bg-darkmode-theme-light">
   <div class="border-border dark:border-darkmode-border border-t">
     <div class="container py-2">
-      <div class="flex flex-wrap items-center justify-center gap-4">
+      <div
+        class="flex flex-wrap items-center justify-center gap-2 md:gap-4 text-sm">
+        <!-- Company name -->
+        <span class="text-light dark:text-darkmode-light">Empiria</span>
+
+        <!-- Separator -->
+        <span class="text-light dark:text-darkmode-light">•</span>
+
         <!-- Social icons -->
-        <ul class="social-icons flex gap-2">
+        <ul class="social-icons flex gap-1">
           {{ range site.Data.social.main }}
             <li>
               <a
@@ -17,53 +24,36 @@
           {{ end }}
         </ul>
 
-        <!-- Footer links -->
-        <ul class="flex gap-1">
-          {{ range site.Menus.footer }}
-            <li>
-              <a
-                {{ if findRE `^http` .URL }}
-                  target="_blank" rel="noopener"
-                {{ end }}
-                href="{{ if findRE `^#` .URL }}
-                  {{ if not $.IsHome }}
-                    {{ site.Home.RelPermalink }}
-                  {{ end }}{{ .URL }}
-                {{ else }}
-                  {{ .URL | relLangURL }}
-                {{ end }}"
-                class="text-sm"
-                >{{ .Name }}</a
-              >
-            </li>
-          {{ end }}
-        </ul>
+        <!-- Separator -->
+        <span class="text-light dark:text-darkmode-light hidden md:inline"
+          >•</span
+        >
 
         <!-- Team blog links -->
-        <ul class="flex gap-2">
-          <li>
-            <a
-              href="/blog"
-              class="text-sm text-primary dark:text-darkmode-primary hover:text-secondary dark:hover:text-darkmode-secondary"
-              >Owen's Blog</a
-            >
-          </li>
-          <li>
-            <a
-              href="/blog"
-              class="text-sm text-primary dark:text-darkmode-primary hover:text-secondary dark:hover:text-darkmode-secondary"
-              >James's Blog</a
-            >
-          </li>
-        </ul>
+        <div class="flex gap-1">
+          <a
+            href="/blog"
+            class="text-primary dark:text-darkmode-primary hover:text-secondary dark:hover:text-darkmode-secondary"
+            >Owen's Blog</a
+          >
+          <span class="text-light dark:text-darkmode-light">|</span>
+          <a
+            href="/blog"
+            class="text-primary dark:text-darkmode-primary hover:text-secondary dark:hover:text-darkmode-secondary"
+            >James's Blog</a
+          >
+        </div>
+
+        <!-- Separator -->
+        <span class="text-light dark:text-darkmode-light hidden md:inline"
+          >•</span
+        >
 
         <!-- Company info -->
-        <div class="text-light dark:text-darkmode-light text-sm">
-          <p>
-            {{ site.Params.footer_text | markdownify }} •
-            {{ site.Params.copyright | markdownify }}
-          </p>
-        </div>
+        <span class="text-light dark:text-darkmode-light">
+          {{ site.Params.footer_text | markdownify }} •
+          {{ site.Params.copyright | markdownify }}
+        </span>
       </div>
     </div>
   </div>
