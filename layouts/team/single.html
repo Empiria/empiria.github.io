@@ -26,10 +26,7 @@
                   href="{{ .link | safeURL }}"
                   target="_blank"
                   rel="noopener nofollow"
-                  class="inline-flex h-10 w-10 items-center justify-center rounded-full transition-colors"
-                  style="background-color: rgb(31, 41, 55); color: white;"
-                  onmouseover="this.style.backgroundColor='rgb(55, 65, 81)'"
-                  onmouseout="this.style.backgroundColor='rgb(31, 41, 55)'"
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-full transition-colors bg-primary dark:bg-darkmode-primary text-white hover:bg-secondary dark:hover:bg-darkmode-secondary"
                   aria-label="{{ .name }}">
                   {{ partial (printf "icons/%s" .name) }}
                 </a>
