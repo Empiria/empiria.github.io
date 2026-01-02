@@ -51,7 +51,7 @@ strong {
 }
 
 code {
-  @apply after:border-none;
+  @apply after:border-none font-mono;
 }
 
 blockquote > p {

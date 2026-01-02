@@ -84,6 +84,10 @@ module.exports = {
           theme.fonts.font_family.secondary,
           theme.fonts.font_family.secondary_type,
         ],
+        mono: [
+          theme.fonts.font_family.monospace,
+          theme.fonts.font_family.monospace_type,
+        ],
       },
     },
   },

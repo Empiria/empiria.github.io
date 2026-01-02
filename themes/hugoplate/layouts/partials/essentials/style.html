@@ -17,12 +17,13 @@
 <!-- google fonts -->
 {{ $pf:= site.Data.theme.fonts.font_family.primary }}
 {{ $sf:= site.Data.theme.fonts.font_family.secondary }}
+{{ $mf:= site.Data.theme.fonts.font_family.monospace }}
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <script>
   (function () {
     const googleFont = document.createElement("link");
-    googleFont.href = "https://fonts.googleapis.com/css2?family={{$pf | safeURL}}{{with $sf}}&family={{. | safeURL}}{{end}}&display=swap";
+    googleFont.href = "https://fonts.googleapis.com/css2?family={{$pf | safeURL}}{{with $sf}}&family={{. | safeURL}}{{end}}&family={{$mf | safeURL}}&display=swap";
     googleFont.type = "text/css";
     googleFont.rel = "stylesheet";
     document.head.appendChild(googleFont);
