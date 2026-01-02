@@ -9,18 +9,21 @@ This is the Empiria website, a Hugo-based static site using the HugoPlate theme 
 ## Development Commands
 
 ### Local Development
+
 ```bash
 npm run dev              # Start Hugo development server with draft support
 npm run preview          # Preview production build locally with live reload
 ```
 
 ### Building
+
 ```bash
 npm run build            # Build production site (output to public/)
 npm run format           # Format all files with Prettier
 ```
 
 ### Hugo Modules
+
 ```bash
 npm run update-modules   # Clean and update all Hugo modules
 ```
@@ -39,6 +42,7 @@ npm run update-modules   # Clean and update all Hugo modules
 ### Content Organization
 
 All content lives under `content/english/`:
+
 - `blog/`: Blog posts (markdown files with frontmatter)
 - `projects/`: Project showcase pages
 - `talks/`: Conference talks and presentations
@@ -54,6 +58,7 @@ Content is structured using Hugo's content organization with front matter for me
 ### Theme System
 
 The site uses the HugoPlate theme located in `themes/hugoplate/`. The theme provides:
+
 - Layout templates in `themes/hugoplate/layouts/`
 - Component partials and shortcodes
 - Base styling and structure
@@ -74,6 +79,7 @@ The site uses the HugoPlate theme located in `themes/hugoplate/`. The theme prov
 ### Hugo Modules
 
 The site uses Hugo modules from `gethugothemes/hugo-modules` for features like:
+
 - Image optimization and favicon handling
 - Search functionality
 - Gallery sliders and accordions
@@ -93,7 +99,9 @@ Modules are defined in `config/_default/module.toml` and managed via `go.mod`.
 ## Key Concepts
 
 ### Content Front Matter
+
 Blog posts and pages use YAML front matter with fields like:
+
 - `title`: Page title
 - `date`: Publication date
 - `image`: Featured image
@@ -102,15 +110,19 @@ Blog posts and pages use YAML front matter with fields like:
 - `draft`: Draft status
 
 ### Multilingual Support
+
 The site is configured for internationalization with English as the default language (`defaultContentLanguage = 'en'`). Content is organized by language subdirectories.
 
 ### Dark Mode
+
 Dark mode is configured via:
+
 - `params.toml`: `theme_switcher = true`, `theme_default = "dark"`
 - `data/theme.json`: Separate color palettes for light/dark modes
 - Tailwind CSS darkmode classes
 
 ### Build Optimization
+
 - Hugo builds track used CSS classes via `hugo_stats.json`
 - Tailwind uses this for PurgeCSS to minimize bundle size
 - Cache busters configured in `hugo.toml` for assets
@@ -119,54 +131,68 @@ Dark mode is configured via:
 ## Common Workflows
 
 ### Adding a New Blog Post
+
 1. Create a markdown file in `content/english/blog/`
 2. Add front matter with required fields (title, date, image, author, etc.)
 3. Write content in markdown
 4. Set `draft: false` when ready to publish
 
 ### Modifying Site Navigation
+
 Edit `config/_default/menus.en.toml` to add/remove/reorder menu items.
 
 ### Changing Site Colors or Fonts
+
 Edit `data/theme.json` - changes automatically propagate to Tailwind config.
 
 ### Customizing Theme Templates
+
 Create a file in root `layouts/` mirroring the theme path (e.g., `layouts/blog/single.html` overrides `themes/hugoplate/layouts/blog/single.html`).
 
 ### Updating Dependencies
+
 - **Hugo modules**: `npm run update-modules`
 - **npm packages**: `npm update` (for Tailwind, PostCSS, etc.)
 
 ## Deployment
 
-The site appears to be deployed to Fleek (IPFS hosting):
-- Preview: https://empiria-website.on-fleek.app/
-- IPNS URL available for Brave browser
-- Build command: `npm run build`
-- Output directory: `public/`
+### Multi-Platform Architecture
 
-## Landing the Plane (Session Completion)
+The Empiria website is designed to work across multiple platforms with a single Hugo build:
 
-**When ending a work session**, you MUST complete ALL steps below. Work is NOT complete until `git push` succeeds.
+**Primary Deployment - Swarm Network:**
 
-**MANDATORY WORKFLOW:**
+- Canonical deployment target: Swarm network (IPFS-based distributed storage)
+- Accessible via multiple Swarm gateways:
+  - https://empiria.eth.limo
+  - https://empiria.eth.link
+  - https://empiria.bzz.link
+- Content addressed via IPFS for permanent, decentralized access
+- No single point of failure
 
-1. **File issues for remaining work** - Create issues for anything that needs follow-up
-2. **Run quality gates** (if code changed) - Tests, linters, builds
-3. **Update issue status** - Close finished work, update in-progress items
-4. **PUSH TO REMOTE** - This is MANDATORY:
-   ```bash
-   git pull --rebase
-   bd sync
-   git push
-   git status  # MUST show "up to date with origin"
-   ```
-5. **Clean up** - Clear stashes, prune remote branches
-6. **Verify** - All changes committed AND pushed
-7. **Hand off** - Provide context for next session
+**Secondary Deployment - GitHub Pages:**
 
-**CRITICAL RULES:**
-- Work is NOT complete until `git push` succeeds
-- NEVER stop before pushing - that leaves work stranded locally
-- NEVER say "ready to push when you are" - YOU must push
-- If push fails, resolve and retry until it succeeds
+- Repository: https://github.com/empiria/empiria.github.io
+- Custom domain: https://empiria.co.uk
+- Serves traditional web traffic and provides backup access
+- Build workflow: `.github/workflows/gh-pages.yml`
+
+### Hugo Configuration for Multi-Domain Support
+
+**Critical Configuration:**
+
+- `baseURL = "/"` - Essential for multi-domain compatibility
+- `relativeURLs = true` - Ensures links work across all gateways
+- **Why this matters**: Absolute URLs would break when accessed via different Swarm gateways
+
+**Build Process:**
+
+- Command: `npm run build`
+- Output: `public/` directory
+- Single build serves all platforms simultaneously
+
+### Repository Naming
+
+- **Local directory**: `empiria-website` (development convenience)
+- **GitHub repository**: `empiria.github.io` (organization site for Pages)
+- **No rename required**: Local and remote names can differ
