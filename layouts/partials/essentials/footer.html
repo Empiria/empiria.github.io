@@ -3,11 +3,16 @@
     <div class="container py-2">
       <div
         class="flex flex-wrap items-center justify-center gap-2 md:gap-4 text-sm">
-        <!-- Company name -->
-        <span class="text-light dark:text-darkmode-light">Empiria</span>
+        <!-- Company name and registration -->
+        <span class="text-light dark:text-darkmode-light">
+          Empiria •
+          {{ site.Params.footer_text | markdownify }}
+        </span>
 
         <!-- Separator -->
-        <span class="text-light dark:text-darkmode-light">•</span>
+        <span class="text-light dark:text-darkmode-light hidden md:inline"
+          >•</span
+        >
 
         <!-- Social icons -->
         <ul class="social-icons flex gap-1">
@@ -49,9 +54,8 @@
           >•</span
         >
 
-        <!-- Company info -->
+        <!-- Copyright -->
         <span class="text-light dark:text-darkmode-light">
-          {{ site.Params.footer_text | markdownify }} •
           {{ site.Params.copyright | markdownify }}
         </span>
       </div>
