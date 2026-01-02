@@ -2,33 +2,9 @@
 
 This file provides guidance to AI assistants when working with code in this repository.
 
-## Project Overview
+**For basic development setup and deployment information, see [README.md](README.md).**
 
-This is the Empiria website, a Hugo-based static site using the HugoPlate theme with Tailwind CSS for styling. The site is built with Hugo Extended (v0.124+), Node.js (v20+), and Go (v1.22+).
-
-## Development Commands
-
-### Local Development
-
-```bash
-npm run dev              # Start Hugo development server with draft support
-npm run preview          # Preview production build locally with live reload
-```
-
-### Building
-
-```bash
-npm run build            # Build production site (output to public/)
-npm run format           # Format all files with Prettier
-```
-
-### Hugo Modules
-
-```bash
-npm run update-modules   # Clean and update all Hugo modules
-```
-
-## Architecture
+## Technical Architecture
 
 ### Hugo Configuration Structure
 
@@ -96,7 +72,7 @@ Modules are defined in `config/_default/module.toml` and managed via `go.mod`.
 - **`data/`**: Data files (theme.json for design tokens, social.json for social links)
 - **`resources/`**: Hugo-generated cached resources
 
-## Key Concepts
+## Key Technical Details
 
 ### Content Front Matter
 
@@ -128,71 +104,76 @@ Dark mode is configured via:
 - Cache busters configured in `hugo.toml` for assets
 - Image processing and caching configured under `[imaging]` and `[caches]`
 
-## Common Workflows
+## Radicle Integration
 
-### Adding a New Blog Post
+### Repository Details
 
-1. Create a markdown file in `content/english/blog/`
-2. Add front matter with required fields (title, date, image, author, etc.)
-3. Write content in markdown
-4. Set `draft: false` when ready to publish
+- **DID**: `z6MkpNz1akJaoWC26SByZx9BSP5USNQpTsJeeh2ioYmdkBu5`
+- **Radicle is used for decentralized development collaboration**
 
-### Modifying Site Navigation
+### Radicle Commands
 
-Edit `config/_default/menus.en.toml` to add/remove/reorder menu items.
+**Always use these exact commands for Radicle issue management:**
 
-### Changing Site Colors or Fonts
+```bash
+# Create issues
+rad issue open --title "Title" --description "Description" --label "priority:high"
 
-Edit `data/theme.json` - changes automatically propagate to Tailwind config.
+# Comment on issues
+rad issue comment <issue-id> --message "Comment text" --no-announce
 
-### Customizing Theme Templates
+# Close issues (NOT "rad issue close")
+rad issue state <issue-id> --closed --no-announce
 
-Create a file in root `layouts/` mirroring the theme path (e.g., `layouts/blog/single.html` overrides `themes/hugoplate/layouts/blog/single.html`).
+# Assign issues
+rad issue assign --add $(rad self --did) --no-announce <issue-id>
+rad issue assign --delete $(rad self --did) --no-announce <issue-id>
 
-### Updating Dependencies
+# Label management
+rad issue label --add "status:in-progress" --no-announce <issue-id>
+rad issue label --delete "status:in-progress" --no-announce <issue-id>
+```
 
-- **Hugo modules**: `npm run update-modules`
-- **npm packages**: `npm update` (for Tailwind, PostCSS, etc.)
+**Key Points:**
 
-## Deployment
+- Use `rad issue state <issue-id> --closed` (NOT `rad issue close`)
+- Always include `--no-announce` flag for local-only operations
+- Use `$(rad self --did)` for self-assignment
 
-### Multi-Platform Architecture
+## AI Assistant Guidelines
 
-The Empiria website is designed to work across multiple platforms with a single Hugo build:
+### Code Comments
 
-**Primary Deployment - Swarm Network:**
+Use comments sparingly. Only add comments when:
 
-- Canonical deployment target: Swarm network (IPFS-based distributed storage)
-- Accessible via multiple Swarm gateways:
-  - https://empiria.eth.limo
-  - https://empiria.eth.link
-  - https://empiria.bzz.link
-- Content addressed via IPFS for permanent, decentralized access
-- No single point of failure
+- The intention of the code is not immediately clear from reading it
+- An obvious-looking alternative approach is not actually suitable (explain why)
 
-**Secondary Deployment - GitHub Pages:**
+**Prefer these alternatives to comments:**
 
-- Repository: https://github.com/empiria/empiria.github.io
-- Custom domain: https://empiria.co.uk
-- Serves traditional web traffic and provides backup access
-- Build workflow: `.github/workflows/gh-pages.yml`
+1. **Proper variable naming**: Use descriptive names that explain purpose
+2. **Refactor into named functions**: Extract complex logic into well-named functions
+3. **Docstrings**: Document public APIs, function parameters, return values, and exceptions
 
-### Hugo Configuration for Multi-Domain Support
+### File Operations
 
-**Critical Configuration:**
+When working with files:
 
-- `baseURL = "/"` - Essential for multi-domain compatibility
-- `relativeURLs = true` - Ensures links work across all gateways
-- **Why this matters**: Absolute URLs would break when accessed via different Swarm gateways
+1. **Read first**: Always read a file before editing to understand current structure
+2. **Follow conventions**: Mimic existing code style, patterns, and naming conventions
+3. **Check imports**: Examine surrounding context to understand framework and library usage
+4. **Override properly**: Use root `layouts/` directory to override theme templates, don't modify theme files directly
 
-**Build Process:**
+### Hugo-Specific Considerations
 
-- Command: `npm run build`
-- Output: `public/` directory
-- Single build serves all platforms simultaneously
+- **Configuration**: Changes to `hugo.toml` or files in `config/_default/` affect the entire site
+- **Content structure**: Follow Hugo's content organization patterns for proper taxonomy and menu generation
+- **Front matter**: Ensure proper YAML formatting and required fields for different content types
+- **Module management**: Use `npm run update-modules` to update Hugo modules safely
 
-### Repository Naming
+## References
 
-- **Local directory**: `empiria-website` (development convenience)
-- **GitHub repository**: `empiria.github.io` (organization site for Pages)
-- **No rename required**: Local and remote names can differ
+- [Hugo Documentation](https://gohugo.io/documentation/)
+- [HugoPlate Theme](https://github.com/zeon-studio/hugoplate/)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [Radicle Documentation](https://radicle.xyz/)
