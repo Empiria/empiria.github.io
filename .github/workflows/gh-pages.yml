@@ -54,7 +54,7 @@ jobs:
 
       - name: Build with Hugo
         env:
-          HUGO_BASEURL: https://empiria.github.io/
+          HUGO_BASEURL: /
         run: npm run build
 
       - name: Upload artifact
