@@ -5,9 +5,9 @@ description: "Empiria website built with Hugo and deployed to Swarm"
 build:
   image: "docker.io/node:22-bookworm"
   cache: true
-  # Install Hugo and build with npm (Hugo available via apt)
+  # Install Hugo 0.154.3 and build with npm
   commands:
-    - apt-get update && apt-get install -y hugo && rm -rf /var/lib/apt/lists/*
+    - curl -L https://github.com/gohugoio/hugo/releases/download/v0.154.3/hugo_0.154.3_linux-arm64.deb -o /tmp/hugo.deb && dpkg -i /tmp/hugo.deb && rm /tmp/hugo.deb
     - npm install
     - npm run build
     - mkdir -p /artifacts && cp -r public/* /artifacts/
