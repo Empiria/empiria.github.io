@@ -105,6 +105,11 @@ baseName = "searchindex"
 isPlainText = true
 notAlternative = true
 
+########################### PostCSS ##########################
+# PostCSS is configured via postcss.config.js
+# This tells Hugo to use PostCSS for CSS processing when css.PostCSS is called in templates
+[security.exec]
+allow = ["^(postcss|npm|node)$"]
 
 ############################# Plugins ##############################
 
