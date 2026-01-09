@@ -3,11 +3,11 @@ project: "empiria-website"
 description: "Empiria website built with Hugo and deployed to Swarm"
 
 build:
-  image: "docker.io/node:22-alpine"
+  image: "docker.io/node:22-bookworm"
   cache: true
-  # Install dependencies and build with Hugo (which is available in PATH via npm)
+  # Install Hugo and build with npm (Hugo available via apt)
   commands:
-    - apk add --no-cache hugo
+    - apt-get update && apt-get install -y hugo && rm -rf /var/lib/apt/lists/*
     - npm install
     - npm run build
     - mkdir -p /artifacts && cp -r public/* /artifacts/
