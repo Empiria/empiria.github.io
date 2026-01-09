@@ -5,6 +5,10 @@ description: "Empiria website built with Hugo and deployed to Swarm"
 build:
   image: "docker.io/klakegg/hugo:latest-ext"
   cache: true
+  # Install npm dependencies for PostCSS and Tailwind
+  commands:
+    - npm install
+    - hugo --destination /artifacts
 
 env:
   HUGO_ENVIRONMENT: "production"
