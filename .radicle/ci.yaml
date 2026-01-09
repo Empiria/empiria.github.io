@@ -3,12 +3,14 @@ project: "empiria-website"
 description: "Empiria website built with Hugo and deployed to Swarm"
 
 build:
-  image: "docker.io/klakegg/hugo:latest-ext"
+  image: "docker.io/node:22-alpine"
   cache: true
-  # Install npm dependencies for PostCSS and Tailwind
+  # Install dependencies and build with Hugo (which is available in PATH via npm)
   commands:
+    - apk add --no-cache hugo
     - npm install
-    - hugo --destination /artifacts
+    - npm run build
+    - mkdir -p /artifacts && cp -r public/* /artifacts/
 
 env:
   HUGO_ENVIRONMENT: "production"
