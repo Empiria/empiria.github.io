@@ -1,0 +1,8 @@
+# Without a config here, browserslist searches parent directories for one.
+# Hugo (0.164+) runs PostCSS under Node's permission model scoped to the
+# project root, so that upward search hits ERR_ACCESS_DENIED and the build
+# panics on "POSTCSS: failed to transform /css/style.css".
+#
+# "defaults" is exactly what browserslist falls back to when it finds no
+# config, so CSS output is unchanged — this only stops the search.
+defaults
