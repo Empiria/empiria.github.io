@@ -108,8 +108,9 @@ notAlternative = true
 ########################### PostCSS ##########################
 # PostCSS is configured via postcss.config.js
 # This tells Hugo to use PostCSS for CSS processing when css.PostCSS is called in templates
+# go and git are needed by `hugo mod get`, which the GitHub Pages workflow runs.
 [security.exec]
-allow = ["^(postcss|npm|node)$"]
+allow = ["^(go|git|postcss|npm|node)$"]
 
 ############################# Plugins ##############################
 
