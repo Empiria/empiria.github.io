@@ -3,11 +3,13 @@ project: "empiria-website"
 description: "Empiria website built with Hugo and deployed to Swarm"
 
 build:
-  image: "docker.io/node:22-bookworm"
+  # Node 24: newer Hugo runs PostCSS under node --permission, which Node 22
+  # rejects. Same Node and Hugo as .github/workflows/gh-pages.yml.
+  image: "docker.io/node:24-bookworm"
   cache: true
-  # Install Hugo 0.154.3 extended (with SCSS support) and build with npm
+  # Install Hugo 0.167.0 extended (with SCSS support) and build with npm
   commands:
-    - curl -L https://github.com/gohugoio/hugo/releases/download/v0.154.3/hugo_extended_0.154.3_linux-arm64.deb -o /tmp/hugo.deb && dpkg -i /tmp/hugo.deb && rm /tmp/hugo.deb
+    - curl -fL https://github.com/gohugoio/hugo/releases/download/v0.167.0/hugo_extended_0.167.0_linux-arm64.deb -o /tmp/hugo.deb && dpkg -i /tmp/hugo.deb && rm /tmp/hugo.deb
     - npm install
     - npm run build
     - mkdir -p /artifacts && cp -r public/* /artifacts/

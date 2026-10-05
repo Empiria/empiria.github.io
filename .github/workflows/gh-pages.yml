@@ -41,17 +41,17 @@ jobs:
           # Hugo runs PostCSS under node --permission, which Node 20 rejects.
           node-version: "24"
 
+      # Pinned, and the same version as .radicle/ci.yaml. "latest" let a new
+      # Hugo release break deploys without any change here, and they stayed
+      # broken from January to October 2026.
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "latest"
+          hugo-version: "0.167.0"
           extended: true
 
       - name: Install npm dependencies
         run: npm install
-
-      - name: Update Hugo modules
-        run: hugo mod get -u
 
       - name: Build with Hugo
         env:
