@@ -68,9 +68,13 @@ home = ["HTML", "RSS", "SearchIndex"]
 ############################# Imaging ############################
 [imaging]
 # See https://github.com/disintegration/imaging
-# Default JPEG or WebP quality setting. Default is 75.
-quality = 80
 resampleFilter = "Lanczos"
+# JPEG and WebP quality; Hugo's default is 75. Set per format since Hugo
+# 0.163, which deprecated the single imaging.quality.
+[imaging.jpeg]
+quality = 80
+[imaging.webp]
+quality = 80
 
 ############################ Caches ##############################
 [caches]
