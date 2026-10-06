@@ -36,7 +36,7 @@
 
         <!-- Copyright -->
         <span class="text-light dark:text-darkmode-light">
-          {{ site.Params.copyright | markdownify }}
+          {{ replace site.Params.copyright "{year}" now.Year | markdownify }}
         </span>
       </div>
     </div>
