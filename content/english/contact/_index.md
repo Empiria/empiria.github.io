@@ -1,7 +1,7 @@
 ---
 title: "Contact"
 meta_title: ""
-description: "this is meta description"
+description: "Get in touch with Empiria about your next software project."
 draft: false
 ---
 

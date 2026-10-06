@@ -2,7 +2,7 @@
 title: Owen
 email: owen.campbell@empiria.co.uk
 image: "/images/owen.jpg"
-description: this is meta description
+description: "Owen is a freelance software engineer with over 30 years' experience, a Python enthusiast, a PyCon UK organiser and chair of the UK Python Association."
 social:
   - name: github
     link: https://github.com/meatballs

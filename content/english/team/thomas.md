@@ -2,7 +2,7 @@
 title: Thomas
 email: thomas.campbell@empiria.co.uk
 image: "/images/thomas.jpg"
-description: this is meta description
+description: "Thomas is a freelance software engineer interested in mathematics, decentralisation, tabletop games and disc golf."
 social:
   - name: github
     link: https://github.com/uglyfruitcake

@@ -2,7 +2,7 @@
 title: James
 email: james.campbell@empiria.co.uk
 image: "/images/james.jpg"
-description: this is meta description
+description: "James is a full-stack developer, blockchain engineer and DevOps engineer, interested in trustless, open-source and decentralised technology."
 social:
   - name: github
     link: https://github.com/theref

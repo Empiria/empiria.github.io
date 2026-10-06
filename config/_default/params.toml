@@ -64,7 +64,7 @@ show_categories = true
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
 [metadata]
 keywords = []
-description = "Empiria"
+description = "Empiria is a small, UK-based family team of three software developers with several decades of experience between us, working across finance, engineering, healthcare and government."
 author = "Empiria"
 image = "images/ethdam.png"
 
