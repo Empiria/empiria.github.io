@@ -5,6 +5,8 @@
 # host here (empiria.github.io) caused the January CORS breakage.
 baseURL = "https://empiria.co.uk/"
 relativeURLs = true
+# No tag or category pages: the blog is too small for them to be useful.
+disableKinds = ["taxonomy", "term"]
 title = "Empiria"
 theme = "hugoplate"
 timeZone = "Europe/London"

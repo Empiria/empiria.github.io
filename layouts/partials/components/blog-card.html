@@ -7,31 +7,19 @@
     </a>
   {{ end }}
   <div class="p-8 px-3 pb-8 text-center sm:px-8">
+    {{/* Projects and talks have no author; don't link to an empty team// page. */}}
+    {{ with .Params.author }}
     <ul class="mb-4">
       <li class="mr-4 inline-block">
         <a
-          href="{{ `team/` | relLangURL }}{{ .Params.Author | urlize }}/"
+          href="{{ `team/` | relLangURL }}{{ . | urlize }}/"
           class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
           <span class="mr-2">{{ partial "icons/user" }}</span
-          >{{ .Params.author }}
+          >{{ . }}
         </a>
       </li>
-      {{ $categories:= .Params.categories }}
-      {{ if $categories }}
-        <li class="mr-4 inline-block">
-          <span class="mr-2">{{ partial "icons/folder" }}</span>
-          {{ range $i,$p:= $categories }}
-            <a
-              href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}/"
-              class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              >{{ . | humanize }}{{ if ne $i (sub (len $categories) 1) }}
-                {{ "," }}
-              {{ end }}
-            </a>
-          {{ end }}
-        </li>
-      {{ end }}
     </ul>
+    {{ end }}
     <h3 class="mb-2">
       <a
         href="{{ .RelPermalink }}"
