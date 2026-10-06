@@ -1,4 +1,9 @@
-baseURL = "/"
+# The real address, so the sitemap, canonical links and og:url/og:image are
+# absolute (search engines and link previews ignore relative ones). Links and
+# assets in the HTML stay relative through relativeURLs, so the same build
+# also works from Swarm gateways, which serve it under other hosts. A wrong
+# host here (empiria.github.io) caused the January CORS breakage.
+baseURL = "https://empiria.co.uk/"
 relativeURLs = true
 title = "Empiria"
 theme = "hugoplate"

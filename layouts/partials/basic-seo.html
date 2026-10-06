@@ -1,8 +1,5 @@
-<!-- base url -->
-{{ if or (eq site.BaseURL "/") (eq site.BaseURL "http://localhost:1313/") }}
-{{ else }}
-  <base href="{{ .Permalink }}" />
-{{ end }}
+<!-- No <base> tag: links are relative (relativeURLs), and a base pointing at
+     empiria.co.uk would make Swarm gateways load everything cross-origin. -->
 
 
 <!-- title -->
@@ -47,6 +44,9 @@
     content="{{ delimit site.Params.metadata.keywords `, ` }}" />
 {{ end }}
 
+
+<!-- canonical: the site is also served from Swarm gateways under other hosts -->
+<link rel="canonical" href="{{ .Permalink }}" />
 
 <!-- meta description -->
 <meta

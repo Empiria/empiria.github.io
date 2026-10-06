@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{{/* Hugo's built-in alias page redirects to the absolute permalink, which
+     would send Swarm visitors to empiria.co.uk; redirect within the host. */}}
+<html lang="{{ site.Language.LanguageCode }}">
+<head>
+<title>{{ .Page.RelPermalink }}</title>
+<link rel="canonical" href="{{ .Permalink }}">
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="0; url={{ .Page.RelPermalink }}">
+</head>
+</html>
